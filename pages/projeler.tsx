@@ -139,6 +139,156 @@ export default function Projeler() {
             })}
           </div>
         </section>
+
+        <section style={{
+          width: '100%',
+          maxWidth: 1200,
+          marginBottom: 60,
+        }}>
+          <h2 style={{ fontSize: 32, fontWeight: 'bold', marginBottom: 40, color: '#333', textAlign: 'center' }}>Diğer Projeler</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/1.jpg" alt="Proje 1" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 1</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/2.jpg" alt="Proje 2" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 2</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/3.jpg" alt="Proje 3" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 3</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/4.jpg" alt="Proje 4" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 4</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/5.jpg" alt="Proje 5" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 5</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/6.jpg" alt="Proje 6" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 6</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/7.jpg" alt="Proje 7" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 7</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/8.jpg" alt="Proje 8" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 8</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/9.jpg" alt="Proje 9" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 9</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/10.jpg" alt="Proje 10" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 10</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/11.jpg" alt="Proje 11" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 11</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/12.jpg" alt="Proje 12" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 12</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/13.jpg" alt="Proje 13" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 13</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/14.jpg" alt="Proje 14" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 14</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/15.jpg" alt="Proje 15" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 15</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/16.jpg" alt="Proje 16" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 16</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/17.jpg" alt="Proje 17" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 17</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/18.jpg" alt="Proje 18" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 18</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/19.jpg" alt="Proje 19" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 19</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/projeler/20.jpg" alt="Proje 20" className="w-full h-64 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">Proje 20</h3>
+                <p className="text-gray-600">Proje açıklaması burada yer alacak.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );

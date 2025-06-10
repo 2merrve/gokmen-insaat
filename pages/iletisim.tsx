@@ -301,8 +301,6 @@ export default function Iletisim() {
         </section>
       </main>
 
-      <footer style={{ textAlign: 'center', padding: '25px 0', color: '#888', fontSize: 14, background: '#f0f0f0', borderTop: '1px solid #e0e0e0', position: 'relative', zIndex: 1 }}>
-      </footer>
     </div>
   );
 } 
