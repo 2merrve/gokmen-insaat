@@ -30,9 +30,9 @@ export default function Hakkimizda() {
         <Image
           src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1600&q=80"
           alt="Şehir İnşaatı"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
           priority
         />
         <div style={{
@@ -64,7 +64,7 @@ export default function Hakkimizda() {
       </section>
 
       <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '60px 16px', position: 'relative', zIndex: 1, width: '100%' }}>
-        {/* Biz Kimiz? Bölümü - Basit Metin Odaklı */}
+        {/* Biz Kimiz? Bölümü */}
         <section style={{
           maxWidth: 800,
           width: '100%',
@@ -87,7 +87,7 @@ export default function Hakkimizda() {
             Biz; bugünün emeğini, yarının değerine dönüştüren genç ama kararlı bir inşaat firmasıyız.</p>
         </section>
 
-        {/* Hizmetlerimiz Bölümü - Anasayfadaki gibi kartlara dönüştürüldü */}
+        {/* Hizmetlerimiz Bölümü */}
         <section style={{
           maxWidth: 1000,
           width: '100%',
@@ -132,19 +132,19 @@ export default function Hakkimizda() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 30, justifyContent: 'center' }}>
             <div style={{ background: '#fff', borderRadius: 10, padding: '20px 30px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', textAlign: 'center', color: '#444', borderTop: '3px solid #555' }}>
               <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, color: '#333' }}>Güvenilirlik</h3>
-              <p style={{ fontSize: 15, color: '#666' }}>İşimizi dürüstlük ve şeffaflık ilkeleriyle yürütürüz.</p>
+              <p style={{ fontSize: 15, color: '#666' }}>Söz verdiğimiz her şeyi, temelden çatıya kadar eksiksiz yerine getiririz.</p>
             </div>
             <div style={{ background: '#fff', borderRadius: 10, padding: '20px 30px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', textAlign: 'center', color: '#444', borderTop: '3px solid #555' }}>
               <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, color: '#333' }}>Kalite</h3>
-              <p style={{ fontSize: 15, color: '#666' }}>Her projede en yüksek kalite standartlarını hedefleriz.</p>
+              <p style={{ fontSize: 15, color: '#666' }}>Detaylarda saklı mükemmelliği, her projemize özenle işleriz.</p>
             </div>
             <div style={{ background: '#fff', borderRadius: 10, padding: '20px 30px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', textAlign: 'center', color: '#444', borderTop: '3px solid #555' }}>
               <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, color: '#333' }}>İnovasyon</h3>
-              <p style={{ fontSize: 15, color: '#666' }}>Yenilikçi çözümlerle sektörde fark yaratırız.</p>
+              <p style={{ fontSize: 15, color: '#666' }}>Kalıpları kırar, yenilikle inşa ederiz—hem fikri hem yapıyı.</p>
             </div>
             <div style={{ background: '#fff', borderRadius: 10, padding: '20px 30px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', textAlign: 'center', color: '#444', borderTop: '3px solid #555' }}>
               <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, color: '#333' }}>Müşteri Memnuniyeti</h3>
-              <p style={{ fontSize: 15, color: '#666' }}>Müşterilerimizin beklentilerini aşmayı önceliklendiririz.</p>
+              <p style={{ fontSize: 15, color: '#666' }}>Bizim için "işin bitmesi" değil, "memnuniyetin başlaması" önemlidir.</p>
             </div>
           </div>
         </section>
@@ -163,13 +163,15 @@ export default function Hakkimizda() {
         }}>
           <h2 style={{ fontSize: 36, fontWeight: 'bold', marginBottom: 30, color: '#222', textShadow: '1px 1px 3px rgba(0,0,0,0.1)' }}>İş Yapış Şeklimiz</h2>
           <div style={{ fontSize: 18, color: '#444', lineHeight: 1.6, maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li style={{ marginBottom: 15, paddingLeft: 20, position: 'relative' }}>🏗️ Projelerimizde detaylı planlama ve titiz çalışma süreçleri uygularız.</li>
-              <li style={{ marginBottom: 15, paddingLeft: 20, position: 'relative' }}>Transparency ve açık iletişim ile tüm paydaşlarımızı bilgilendiririz.</li>
-              <li style={{ marginBottom: 15, paddingLeft: 20, position: 'relative' }}>Modern mühendislik teknikleri ve en son teknolojiyi projelerimize entegre ederiz.</li>
-              <li style={{ marginBottom: 15, paddingLeft: 20, position: 'relative' }}>Sürdürülebilirlik ve çevreye duyarlılık ilkelerine bağlı kalırız.</li>
-              <li style={{ marginBottom: 0, paddingLeft: 20, position: 'relative' }}>Her aşamada uyguladığımız sıkı kalite kontrol süreçleri ile hatasız teslimat garantisi veririz.</li>
-            </ul>
+            <p style={{ marginBottom: 25, textAlign: 'center' }}>
+              Projelerimizi; analiz, planlama, uygulama ve denetim aşamalarında sistematik bir yaklaşımla yürütürüz. Her işte ölçek fark etmeksizin mühendislik prensiplerine, iş sağlığı ve güvenliği kurallarına ve yasal mevzuata tam uyum sağlarız.
+            </p>
+            <p style={{ marginBottom: 25, textAlign: 'center' }}>
+              Zaman, maliyet ve kalite üçgeninde denge kurarak; iş programına sadık, kaynakları verimli kullanan ve süreci şeffaf şekilde yöneten bir anlayış benimsiyoruz.
+            </p>
+            <p style={{ marginBottom: 25, textAlign: 'center' }}>
+              İletişimi sürekli, kararları veri odaklı ve uygulamayı sahaya uygun hale getirerek, her projede sürdürülebilir başarıyı hedefliyoruz.
+            </p>
           </div>
         </section>
 
@@ -186,21 +188,24 @@ export default function Hakkimizda() {
           border: '1px solid #eee'
         }}>
           <h2 style={{ fontSize: 36, fontWeight: 'bold', marginBottom: 30, color: '#222', textShadow: '1px 1px 3px rgba(0,0,0,0.1)' }}>Ekibimiz</h2>
-          <p style={{ fontSize: 18, color: '#444', lineHeight: 1.6, maxWidth: 800, margin: '0 auto 40px auto' }}>Başarımızın ardındaki güçlü ve deneyimli ekibimizle tanışın.</p>
+          <p style={{ fontSize: 18, color: '#444', lineHeight: 1.6, maxWidth: 800, margin: '0 auto 40px auto' }}>Biz projeleri Excel'de başlatır, sahada sonuçlandırırız. Krizlere soğukkanlı, kahveye sıcak bakarız. İş bitmeden masasından kalkmayan, plan yapmadan adım atmayan bir ekibiz.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 30, justifyContent: 'center' }}>
             {/* Yönetici */}
             <div style={{ background: '#fff', borderRadius: 10, overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', textAlign: 'center', paddingBottom: 20 }}>
-              <div style={{ position: 'relative', width: '100%', height: 200, marginBottom: 15 }}>
+              <div style={{ position: 'relative', width: '100%', height: 600, marginBottom: 15 }}>
                 <Image
-                  src="/images/yonetim.jpg"
+                  src="/yonetimekibi.jpg"
                   alt="Yönetim Ekibi"
-                  layout="fill"
-                  objectFit="cover"
-                  style={{ filter: 'grayscale(30%)' }}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
               <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 5, color: '#333' }}>Yönetim Ekibi</h3>
-              <p style={{ fontSize: 15, color: '#555' }}>Profesyonel Yönetim Kadrosu</p>
+              <p style={{ fontSize: 15, color: '#555', marginBottom: 15 }}>Profesyonel Yönetim Kadrosu</p>
+              <p style={{ fontSize: 16, color: '#444', lineHeight: 1.6, padding: '0 20px' }}>
+                Gökmen Kardeşler olarak, bu yolda omuz omuza yürümekten doğan birlik ruhunu işimize yansıtıyor; birlikte başarmanın gururunu ve güvenle ilerlemenin mutluluğunu yaşıyoruz.
+              </p>
             </div>
           </div>
         </section>
@@ -208,7 +213,6 @@ export default function Hakkimizda() {
       </main>
 
       <footer style={{ textAlign: 'center', padding: '25px 0', color: '#888', fontSize: 14, background: '#f0f0f0', borderTop: '1px solid #e0e0e0', position: 'relative', zIndex: 1 }}>
-        © {new Date().getFullYear()} Gökmen İnşaat. Tüm hakları saklıdır.
       </footer>
     </div>
   );

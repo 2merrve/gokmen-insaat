@@ -81,7 +81,7 @@ export default function Iletisim() {
             fontWeight: 'bold',
             marginBottom: 20,
             letterSpacing: 2,
-            textShadow:'2px 2px 8px rgba(0,0,0,0.5)',
+            textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
             background: 'linear-gradient(45deg, #fff, #e0e0e0)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -94,7 +94,7 @@ export default function Iletisim() {
         </div>
       </section>
 
-      <main style={{flex:1,display:'flex',flexDirection:'column',alignItems:'center',padding:'60px 16px',position:'relative',zIndex:1, width:'100%'}}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '60px 16px', position: 'relative', zIndex: 1, width: '100%' }}>
         <section style={{
           maxWidth: 1000,
           width: '100%',
@@ -102,22 +102,22 @@ export default function Iletisim() {
           background: '#f9f9f9',
           borderRadius: 16,
           padding: 40,
-          boxShadow:'0 4px 20px rgba(0,0,0,0.1)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
           textAlign: 'center',
         }}>
-          <h2 style={{fontSize: 36, fontWeight: 'bold', marginBottom: 30, color:'#333'}}>İletişim Bilgileri</h2>
-          <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(250px, 1fr))', gap:25, justifyContent:'center'}}>
-            <div style={{background:'#fff',borderRadius:10,padding:'20px 30px', boxShadow:'0 2px 8px rgba(0,0,0,0.08)', textAlign: 'center', color:'#333', borderTop:'3px solid #556270'}}>
-              <h3 style={{fontSize: 20, fontWeight: 600, marginBottom: 10, color:'#333'}}>Adres</h3>
-              <p style={{fontSize: 15, color:'#555'}}>Konya, Türkiye</p>
+          <h2 style={{ fontSize: 36, fontWeight: 'bold', marginBottom: 30, color: '#333' }}>İletişim Bilgileri</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 25, justifyContent: 'center' }}>
+            <div style={{ background: '#fff', borderRadius: 10, padding: '20px 30px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', textAlign: 'center', color: '#333', borderTop: '3px solid #556270' }}>
+              <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, color: '#333' }}>Adres</h3>
+              <p style={{ fontSize: 15, color: '#555' }}>İstanbul, Türkiye</p>
             </div>
-            <div style={{background:'#fff',borderRadius:10,padding:'20px 30px', boxShadow:'0 2px 8px rgba(0,0,0,0.08)', textAlign: 'center', color:'#333', borderTop:'3px solid #556270'}}>
-              <h3 style={{fontSize: 20, fontWeight: 600, marginBottom: 10, color:'#333'}}>Telefon</h3>
-              <p style={{fontSize: 15, color:'#555'}}>+90 505 098 60 93</p>
+            <div style={{ background: '#fff', borderRadius: 10, padding: '20px 30px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', textAlign: 'center', color: '#333', borderTop: '3px solid #556270' }}>
+              <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, color: '#333' }}>Telefon</h3>
+              <p style={{ fontSize: 15, color: '#555' }}>+90 (212) XXX XX XX</p>
             </div>
-            <div style={{background:'#fff',borderRadius:10,padding:'20px 30px', boxShadow:'0 2px 8px rgba(0,0,0,0.08)', textAlign: 'center', color:'#333', borderTop:'3px solid #556270'}}>
-              <h3 style={{fontSize: 20, fontWeight: 600, marginBottom: 10, color:'#333'}}>E-posta</h3>
-              <p style={{fontSize: 15, color:'#555'}}>inşaat@gokmeninsaat.com</p>
+            <div style={{ background: '#fff', borderRadius: 10, padding: '20px 30px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', textAlign: 'center', color: '#333', borderTop: '3px solid #556270' }}>
+              <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, color: '#333' }}>E-posta</h3>
+              <p style={{ fontSize: 15, color: '#555' }}>info@gokmeninsaat.com</p>
             </div>
           </div>
         </section>
@@ -129,12 +129,12 @@ export default function Iletisim() {
           background: '#f9f9f9',
           borderRadius: 16,
           padding: 40,
-          boxShadow:'0 4px 20px rgba(0,0,0,0.1)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
           textAlign: 'center',
         }}>
-          <h2 style={{fontSize: 36, fontWeight: 'bold', marginBottom: 30, color:'#333'}}>İletişim Formu</h2>
-          <form style={{maxWidth: 600, margin: '0 auto'}} onSubmit={handleSubmit}>
-            <div style={{marginBottom: 20}}>
+          <h2 style={{ fontSize: 36, fontWeight: 'bold', marginBottom: 30, color: '#333' }}>İletişim Formu</h2>
+          <form style={{ maxWidth: 600, margin: '0 auto' }} onSubmit={handleSubmit}>
+            <div style={{ marginBottom: 20 }}>
               <input
                 type="text"
                 placeholder="Adınız"
@@ -149,7 +149,7 @@ export default function Iletisim() {
                   outline: 'none'
                 }} />
             </div>
-            <div style={{marginBottom: 20}}>
+            <div style={{ marginBottom: 20 }}>
               <input
                 type="email"
                 placeholder="E-posta Adresiniz"
@@ -164,7 +164,7 @@ export default function Iletisim() {
                   outline: 'none'
                 }} />
             </div>
-            <div style={{marginBottom: 20}}>
+            <div style={{ marginBottom: 20 }}>
               <textarea
                 placeholder="Mesajınız"
                 rows={5}
@@ -193,7 +193,7 @@ export default function Iletisim() {
               boxShadow: '0 4px 10px rgba(0,0,0,0.2)'
             }} className="contact-submit-button">Gönder</button>
             {status && <p style={{ marginTop: 20, fontSize: 16, color: status.includes('hata') ? 'red' : 'green' }}>{status}</p>}
-            </form>
+          </form>
         </section>
 
         {/* Sosyal Medya Bölümü */}
@@ -204,74 +204,74 @@ export default function Iletisim() {
           background: '#e8e8e8',
           borderRadius: 16,
           padding: 40,
-          boxShadow:'0 8px 25px rgba(0,0,0,0.15)',
+          boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
           textAlign: 'center',
           border: '1px solid #d0d0d0'
         }}>
-          <h2 style={{fontSize: 36, fontWeight: 'bold', marginBottom: 25, color:'#222', textShadow: '1px 1px 3px rgba(0,0,0,0.1)'}}>Bizi Takip Edin</h2>
-          <p style={{fontSize: 18, color: '#444', lineHeight: 1.6, maxWidth: 800, margin:'0 auto 40px auto'}}>Sosyal medya hesaplarımızdan bizi takip ederek güncel projelerimizden ve haberlerden haberdar olabilirsiniz.</p>
-          <div style={{display:'flex', gap:30, justifyContent:'center'}}>
+          <h2 style={{ fontSize: 36, fontWeight: 'bold', marginBottom: 25, color: '#222', textShadow: '1px 1px 3px rgba(0,0,0,0.1)' }}>Bizi Takip Edin</h2>
+          <p style={{ fontSize: 18, color: '#444', lineHeight: 1.6, maxWidth: 800, margin: '0 auto 40px auto' }}>Sosyal medya hesaplarımızdan bizi takip ederek güncel projelerimizden ve haberlerden haberdar olabilirsiniz.</p>
+          <div style={{ display: 'flex', gap: 30, justifyContent: 'center' }}>
             {/* Sosyal Medya İkonları - Placeholder */}
-            <a href="#" style={{
+            <a href="https://www.facebook.com/gokmeninsaat" target="_blank" rel="noopener noreferrer" style={{
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               width: 60,
               height: 60,
               borderRadius: '50%',
-              backgroundColor: '#333',
+              backgroundColor: '#3b5998',
               color: '#fff',
               fontSize: 28,
               textDecoration: 'none',
               transition: 'all 0.3s ease',
               boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
             }} className="social-icon">FB</a> {/* Facebook */}
-            <a href="#" style={{
+            <a href="https://www.twitter.com/gokmeninsaat" target="_blank" rel="noopener noreferrer" style={{
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               width: 60,
               height: 60,
               borderRadius: '50%',
-              backgroundColor: '#333',
+              backgroundColor: '#00acee',
               color: '#fff',
               fontSize: 28,
               textDecoration: 'none',
               transition: 'all 0.3s ease',
               boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
             }} className="social-icon">TW</a> {/* Twitter */}
-            <a href="#" style={{
+            <a href="https://www.instagram.com/gokmeninsaat" target="_blank" rel="noopener noreferrer" style={{
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               width: 60,
               height: 60,
               borderRadius: '50%',
-              backgroundColor: '#333',
+              backgroundColor: '#E1306C',
               color: '#fff',
               fontSize: 28,
               textDecoration: 'none',
               transition: 'all 0.3s ease',
               boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
             }} className="social-icon">IG</a> {/* Instagram */}
-            <a href="#" style={{
+            <a href="https://www.linkedin.com/company/gokmeninsaat" target="_blank" rel="noopener noreferrer" style={{
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               width: 60,
               height: 60,
               borderRadius: '50%',
-              backgroundColor: '#333',
+              backgroundColor: '#0077B5',
               color: '#fff',
               fontSize: 28,
               textDecoration: 'none',
               transition: 'all 0.3s ease',
               boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-            }} className="social-icon">IN</a> {/* LinkedIn */}
+            }} className="social-icon">LI</a> {/* LinkedIn */}
           </div>
 
           {/* Arama Çubuğu */}
-          <div style={{marginTop: 40, width: '100%', maxWidth: 500, margin: '40px auto 0 auto', padding: '10px', background: '#fff', borderRadius: 10, boxShadow: '0 4px 15px rgba(0,0,0,0.1)'}}>
+          <div style={{ marginTop: 40, width: '100%', maxWidth: 500, margin: '40px auto 0 auto', padding: '10px', background: '#fff', borderRadius: 10, boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
             <input
               type="text"
               placeholder="Sitede Arayın..."
@@ -286,7 +286,7 @@ export default function Iletisim() {
               }}
             />
           </div>
-           <style jsx>{`
+          <style jsx>{`
             .social-icon:hover {
               background-color: #555;
               box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -301,8 +301,7 @@ export default function Iletisim() {
         </section>
       </main>
 
-      <footer style={{textAlign:'center',padding:'25px 0',color:'#888',fontSize:14,background:'#f0f0f0',borderTop:'1px solid #e0e0e0',position:'relative',zIndex:1}}>
-        © {new Date().getFullYear()} Gökmen İnşaat. Tüm hakları saklıdır.
+      <footer style={{ textAlign: 'center', padding: '25px 0', color: '#888', fontSize: 14, background: '#f0f0f0', borderTop: '1px solid #e0e0e0', position: 'relative', zIndex: 1 }}>
       </footer>
     </div>
   );

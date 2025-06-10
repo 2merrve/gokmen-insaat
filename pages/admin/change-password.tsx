@@ -59,6 +59,11 @@ export default function ChangePassword() {
         <div className="header-content">
           <h1>Şifre Değiştir</h1>
           <div className="header-buttons">
+            <Link href="/" passHref>
+              <button className="site-button">
+                Siteye Dön
+              </button>
+            </Link>
             <button className="back-button" onClick={handleGoBack}>
               Geri
             </button>
@@ -72,6 +77,8 @@ export default function ChangePassword() {
       <main className="dashboard-content">
         <div className="password-form-container">
           <h2>Şifrenizi Değiştirin</h2>
+          {message && <div className="success-message">{message}</div>}
+          {error && <div className="error-message">{error}</div>}
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label>Mevcut Şifre:</label>
@@ -112,16 +119,16 @@ export default function ChangePassword() {
       <style jsx>{`
         .admin-dashboard {
           min-height: 100vh;
-          background-color: #fafafa;
+          background-color: #212121; // Dark background
           font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
         .dashboard-header {
-          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-          color: #495057;
+          background: linear-gradient(135deg, #121212 0%, #333333 100%); // Darker gradient
+          color: white;
           padding: 1.5rem 2rem;
-          box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-          border-bottom: 1px solid #e9ecef;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+          border-bottom: 1px solid #424242;
         }
 
         .header-content {
@@ -135,28 +142,32 @@ export default function ChangePassword() {
         h1 {
           margin: 0;
           font-size: 1.8rem;
-          font-weight: 500;
-          color: #495057;
+          font-weight: 600;
+          color: #f5f5f5;
         }
 
         .header-buttons {
           display: flex;
-          gap: 1rem;
+          gap: 10px;
         }
 
-        .back-button, .logout-button {
+        .site-button,
+        .back-button,
+        .logout-button {
           padding: 0.6rem 1.2rem;
-          border: 1px solid #dee2e6;
+          border: 1px solid rgba(255,255,255,0.2);
           border-radius: 6px;
           cursor: pointer;
           font-size: 0.9rem;
           transition: all 0.3s ease;
-          color: #495057;
-          background: white;
+          color: white;
+          background: rgba(255,255,255,0.1);
         }
 
-        .back-button:hover, .logout-button:hover {
-          background-color: #f8f9fa;
+        .site-button:hover,
+        .back-button:hover,
+        .logout-button:hover {
+          background-color: rgba(255,255,255,0.2);
           transform: translateY(-1px);
           box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
@@ -168,18 +179,19 @@ export default function ChangePassword() {
         }
 
         .password-form-container {
-          background: white;
+          background: #333333; // Darker background
           padding: 2.5rem;
           border-radius: 12px;
-          box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-          border: 1px solid #e9ecef;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          border: 1px solid #424242;
+          color: #e0e0e0;
         }
 
         .password-form-container h2 {
-          color: #495057;
+          color: #f5f5f5;
           margin: 0 0 2rem 0;
           font-size: 1.5rem;
-          font-weight: 500;
+          font-weight: 600;
         }
 
         .form-group {
@@ -189,7 +201,7 @@ export default function ChangePassword() {
         .form-group label {
           display: block;
           margin-bottom: 0.5rem;
-          color: #495057;
+          color: #bdbdbd;
           font-weight: 500;
           font-size: 0.95rem;
         }
@@ -197,16 +209,17 @@ export default function ChangePassword() {
         .form-group input {
           width: 100%;
           padding: 0.8rem;
-          border: 1px solid #dee2e6;
+          border: 1px solid #555; // Darker border
           border-radius: 8px;
           font-size: 1rem;
           transition: all 0.3s ease;
-          background-color: white;
+          background-color: #424242; // Darker input background
+          color: #e0e0e0;
         }
 
         .form-group input:focus {
-          border-color: #adb5bd;
-          box-shadow: 0 0 0 3px rgba(173, 181, 189, 0.1);
+          border-color: #66bb6a; // Green accent for focus
+          box-shadow: 0 0 0 3px rgba(102, 187, 106, 0.2);
           outline: none;
         }
 
@@ -215,7 +228,7 @@ export default function ChangePassword() {
         }
 
         .submit-button {
-          background-color: #495057;
+          background-color: #4CAF50; // Green
           color: white;
           padding: 0.8rem 1.5rem;
           border: none;
@@ -224,13 +237,31 @@ export default function ChangePassword() {
           font-size: 1rem;
           width: 100%;
           transition: all 0.3s ease;
-          font-weight: 500;
+          font-weight: 600;
         }
 
         .submit-button:hover {
-          background-color: #6c757d;
+          background-color: #43A047;
           transform: translateY(-1px);
           box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .success-message {
+          background-color: #d4edda;
+          color: #155724;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 15px;
+          text-align: center;
+        }
+
+        .error-message {
+          background-color: #f8d7da;
+          color: #721c24;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 15px;
+          text-align: center;
         }
 
         @media (max-width: 768px) {

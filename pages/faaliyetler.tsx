@@ -2,6 +2,17 @@ import React from 'react';
 import Menu from '../components/Menu';
 import Image from 'next/image';
 
+const styles = {
+  card: {
+    background: '#fff',
+    borderRadius: 16,
+    overflow: 'hidden',
+    boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+    transition: 'transform 0.3s ease',
+    cursor: 'pointer',
+  }
+};
+
 export default function Hizmetlerimiz() {
   return (
     <div style={{
@@ -15,7 +26,7 @@ export default function Hizmetlerimiz() {
     }}>
       <Menu />
       <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '60px 16px 80px 16px', position: 'relative', zIndex: 1, width: '100%' }}>
-        
+
         {/* Hero Section */}
         <section style={{
           position: 'relative',
@@ -34,9 +45,9 @@ export default function Hizmetlerimiz() {
           <Image
             src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1600&q=80"
             alt="Faaliyetlerimiz Arka Planı"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
+            fill
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
             priority
           />
           <div style={{
@@ -54,7 +65,7 @@ export default function Hizmetlerimiz() {
               fontWeight: 'bold',
               marginBottom: 20,
               letterSpacing: 2,
-              textShadow:'2px 2px 8px rgba(0,0,0,0.5)',
+              textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
               background: 'linear-gradient(45deg, #fff, #e0e0e0)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -77,25 +88,16 @@ export default function Hizmetlerimiz() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
           gap: 30,
         }}>
-          
+
           {/* Proje Yönetimi */}
-          <div style={{
-            background: '#fff',
-            borderRadius: 16,
-            overflow: 'hidden',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-            transition: 'transform 0.3s ease',
-            ':hover': {
-              transform: 'translateY(-5px)'
-            }
-          }}>
+          <div style={styles.card}>
             <div style={{ position: 'relative', height: 250, width: '100%' }}>
               <Image
                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
                 alt="Proje Yönetimi"
-                layout="fill"
-                objectFit="cover"
-                style={{ filter: 'grayscale(30%)' }}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{ objectFit: 'cover' }}
               />
               <div style={{
                 position: 'absolute',
@@ -120,23 +122,14 @@ export default function Hizmetlerimiz() {
           </div>
 
           {/* İnşaat Mühendisliği */}
-          <div style={{
-            background: '#fff',
-            borderRadius: 16,
-            overflow: 'hidden',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-            transition: 'transform 0.3s ease',
-            ':hover': {
-              transform: 'translateY(-5px)'
-            }
-          }}>
+          <div style={styles.card}>
             <div style={{ position: 'relative', height: 250, width: '100%' }}>
               <Image
                 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
                 alt="İnşaat Mühendisliği"
-                layout="fill"
-                objectFit="cover"
-                style={{ filter: 'grayscale(30%)' }}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{ objectFit: 'cover' }}
               />
               <div style={{
                 position: 'absolute',
@@ -161,23 +154,14 @@ export default function Hizmetlerimiz() {
           </div>
 
           {/* Danışmanlık */}
-          <div style={{
-            background: '#fff',
-            borderRadius: 16,
-            overflow: 'hidden',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-            transition: 'transform 0.3s ease',
-            ':hover': {
-              transform: 'translateY(-5px)'
-            }
-          }}>
+          <div style={styles.card}>
             <div style={{ position: 'relative', height: 250, width: '100%' }}>
               <Image
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
                 alt="Danışmanlık"
-                layout="fill"
-                objectFit="cover"
-                style={{ filter: 'grayscale(30%)' }}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{ objectFit: 'cover' }}
               />
               <div style={{
                 position: 'absolute',
@@ -218,128 +202,91 @@ export default function Hizmetlerimiz() {
             <p style={{ marginBottom: 25, textAlign: 'center' }}>
               Firmamızda teklif süreci, müşteri ihtiyaçlarının detaylı analizi ile başlar. Proje kapsamı ve teknik gereksinimler belirlenerek, maliyet ve zaman çizelgesi titizlikle hazırlanır. Uzman ekibimiz tarafından oluşturulan teklif, şeffaf ve detaylı olarak müşteriye sunulur. Onay sonrası, proje planlaması ve sözleşme aşamasına geçilir. Süreç boyunca iletişim ve revizyonlar etkin şekilde yönetilir, kaliteli ve zamanında hizmet garantisi sağlanır.
             </p>
-            
+
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 20, marginTop: 30 }}>
               <div style={{ background: '#fff', padding: 25, borderRadius: 12, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', textAlign: 'center' }}>
                 <div style={{ fontSize: 24, marginBottom: 15 }}>📊</div>
                 <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10, color: '#333' }}>Analiz</h3>
                 <p style={{ fontSize: 15, color: '#666' }}>Müşteri ihtiyaçları ve proje gereksinimlerinin detaylı analizi</p>
               </div>
-              
+
               <div style={{ background: '#fff', padding: 25, borderRadius: 12, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', textAlign: 'center' }}>
                 <div style={{ fontSize: 24, marginBottom: 15 }}>📝</div>
                 <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10, color: '#333' }}>Planlama</h3>
                 <p style={{ fontSize: 15, color: '#666' }}>Maliyet ve zaman çizelgesi hazırlığı</p>
               </div>
-              
+
               <div style={{ background: '#fff', padding: 25, borderRadius: 12, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', textAlign: 'center' }}>
                 <div style={{ fontSize: 24, marginBottom: 15 }}>🤝</div>
                 <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10, color: '#333' }}>Onay</h3>
                 <p style={{ fontSize: 15, color: '#666' }}>Teklif sunumu ve sözleşme süreci</p>
               </div>
-              
+
               <div style={{ background: '#fff', padding: 25, borderRadius: 12, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', textAlign: 'center' }}>
                 <div style={{ fontSize: 24, marginBottom: 15 }}>📈</div>
                 <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10, color: '#333' }}>Takip</h3>
                 <p style={{ fontSize: 15, color: '#666' }}>Süreç yönetimi ve kalite kontrolü</p>
               </div>
             </div>
-            
-            <div style={{ textAlign: 'center', marginTop: 30 }}>
-              <a href="/iletisim" style={{
-                display: 'inline-block',
-                padding: '12px 30px',
-                background: '#333',
-                color: '#fff',
-                textDecoration: 'none',
-                borderRadius: 8,
-                fontWeight: 600,
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
-              }}>Teklif Alın</a>
-            </div>
           </div>
         </section>
 
-        {/* Proje Tarihleri Bölümü */}
+        {/* Proje Takip Bölümü */}
         <section style={{
           width: '100%',
           maxWidth: 1000,
           marginBottom: 40,
-          background: '#f8f8f8',
-          borderRadius: 16,
+          background: '#fff',
+          borderRadius: 12,
           padding: 40,
-          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-          borderLeft: 'none',
+          boxShadow: '0 2px 12px rgba(0,0,0,0.05)',
         }}>
-          <h2 style={{ fontSize: 30, fontWeight: 'bold', marginBottom: 25, color: '#333' }}>Proje Takvimi</h2>
-          <div style={{ fontSize: 17, color: '#555', lineHeight: 1.7 }}>
-            <p style={{ marginBottom: 20 }}>Gökmen İnşaat olarak, projelerimizin başlangıç ve bitiş tarihlerini şeffaf bir şekilde paylaşıyoruz. Aşağıda güncel proje takvimimizi bulabilirsiniz.</p>
-            
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20, marginTop: 30 }}>
-              {/* Devam Eden Projeler */}
-              <div style={{ background: '#fff', padding: 20, borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #eee' }}>
-                <h3 style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 15, color: '#333' }}>Devam Eden Projeler</h3>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  <li style={{ marginBottom: 12, paddingLeft: 20, position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: 0, color: '#555' }}>•</span>
-                    <strong>Gökmen Villa</strong><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Başlangıç: 01.01.2024</span><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Tahmini Bitiş: 30.06.2024</span>
-                  </li>
-                  <li style={{ marginBottom: 12, paddingLeft: 20, position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: 0, color: '#555' }}>•</span>
-                    <strong>Gökmen Apartmanı</strong><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Başlangıç: 15.03.2024</span><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Tahmini Bitiş: 15.09.2024</span>
-                  </li>
-                </ul>
-              </div>
+          <h2 style={{ fontSize: 28, fontWeight: 'bold', marginBottom: 30, color: '#333', textAlign: 'center' }}>Proje Takibi</h2>
 
-              {/* Tamamlanan Projeler */}
-              <div style={{ background: '#fff', padding: 20, borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #eee' }}>
-                <h3 style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 15, color: '#333' }}>Tamamlanan Projeler</h3>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  <li style={{ marginBottom: 12, paddingLeft: 20, position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: 0, color: '#555' }}>•</span>
-                    <strong>Gökmen Sitesi</strong><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Başlangıç: 01.01.2023</span><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Bitiş: 30.06.2023</span>
-                  </li>
-                  <li style={{ marginBottom: 12, paddingLeft: 20, position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: 0, color: '#555' }}>•</span>
-                    <strong>Gökmen İş Merkezi</strong><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Başlangıç: 15.03.2023</span><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Bitiş: 15.09.2023</span>
-                  </li>
-                </ul>
-              </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 30, marginBottom: 40 }}>
+            <div style={{ padding: 25, background: '#f8f9fa', borderRadius: 8 }}>
+              <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 15, color: '#333' }}>İlerleme Raporları</h3>
+              <p style={{ fontSize: 15, color: '#666', lineHeight: 1.6 }}>Haftalık ve aylık detaylı ilerleme raporları ile projenin durumu takip edilir</p>
+            </div>
 
-              {/* Planlanan Projeler */}
-              <div style={{ background: '#fff', padding: 20, borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #eee' }}>
-                <h3 style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 15, color: '#333' }}>Planlanan Projeler</h3>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  <li style={{ marginBottom: 12, paddingLeft: 20, position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: 0, color: '#555' }}>•</span>
-                    <strong>Gökmen Rezidans</strong><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Planlanan Başlangıç: 01.07.2024</span><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Tahmini Bitiş: 31.12.2024</span>
-                  </li>
-                  <li style={{ marginBottom: 12, paddingLeft: 20, position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: 0, color: '#555' }}>•</span>
-                    <strong>Gökmen Ofis</strong><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Planlanan Başlangıç: 01.10.2024</span><br />
-                    <span style={{ fontSize: 15, color: '#666' }}>Tahmini Bitiş: 30.06.2025</span>
-                  </li>
-                </ul>
+            <div style={{ padding: 25, background: '#f8f9fa', borderRadius: 8 }}>
+              <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 15, color: '#333' }}>Online Takip</h3>
+              <p style={{ fontSize: 15, color: '#666', lineHeight: 1.6 }}>7/24 erişilebilir online platform üzerinden proje durumu izlenebilir</p>
+            </div>
+
+            <div style={{ padding: 25, background: '#f8f9fa', borderRadius: 8 }}>
+              <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 15, color: '#333' }}>Kalite Kontrol</h3>
+              <p style={{ fontSize: 15, color: '#666', lineHeight: 1.6 }}>Her aşamada detaylı kalite kontrol ve denetim raporları</p>
+            </div>
+          </div>
+
+          <div style={{ background: '#f8f9fa', padding: 30, borderRadius: 8 }}>
+            <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 20, color: '#333' }}>Proje Takip Süreci</h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 15 }}>
+                <div style={{ minWidth: 24, height: 24, borderRadius: '50%', background: '#333', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 'bold' }}>1</div>
+                <p style={{ fontSize: 15, color: '#666', margin: 0, lineHeight: 1.6 }}>Proje başlangıcında detaylı planlama ve hedef belirleme</p>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 15 }}>
+                <div style={{ minWidth: 24, height: 24, borderRadius: '50%', background: '#333', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 'bold' }}>2</div>
+                <p style={{ fontSize: 15, color: '#666', margin: 0, lineHeight: 1.6 }}>Düzenli ilerleme toplantıları ve raporlama</p>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 15 }}>
+                <div style={{ minWidth: 24, height: 24, borderRadius: '50%', background: '#333', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 'bold' }}>3</div>
+                <p style={{ fontSize: 15, color: '#666', margin: 0, lineHeight: 1.6 }}>Risk analizi ve önleyici tedbirler</p>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 15 }}>
+                <div style={{ minWidth: 24, height: 24, borderRadius: '50%', background: '#333', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 'bold' }}>4</div>
+                <p style={{ fontSize: 15, color: '#666', margin: 0, lineHeight: 1.6 }}>Kalite kontrol ve performans değerlendirmesi</p>
               </div>
             </div>
-            
-            <p style={{ marginTop: 30, textAlign: 'center' }}>Tüm projelerimizi detaylı incelemek için <a href="/projeler" style={{ color: '#333', fontWeight: 'bold' }}>Projelerimiz</a> sayfamızı ziyaret edin.</p>
           </div>
         </section>
 
       </main>
+
+      <footer style={{ textAlign: 'center', padding: '25px 0', color: '#888', fontSize: 14, background: '#f0f0f0', borderTop: '1px solid #e0e0e0', position: 'relative', zIndex: 1 }}>
+      </footer>
     </div>
   );
 } 

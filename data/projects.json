@@ -1,1 +1,26 @@
-[] 
+[
+  {
+    "id": 1749583416842,
+    "name": [
+      "s"
+    ],
+    "description": [
+      "sadf"
+    ],
+    "status": [
+      "devam_ediyor"
+    ],
+    "location": [
+      "sf"
+    ],
+    "startDate": [
+      "2023-03-12"
+    ],
+    "endDate": [
+      "2027-04-20"
+    ],
+    "image": "/uploads/n2l5ds2sq8tcxifrwlbvizqwv.png",
+    "updatedAt": "2025-06-10T19:23:36.842Z",
+    "createdAt": "2025-06-10T19:23:36.842Z"
+  }
+]

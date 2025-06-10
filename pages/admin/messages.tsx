@@ -55,6 +55,11 @@ export default function AdminMessages() {
       <header>
         <h1>Gelen Mesajlar</h1>
         <div className="header-buttons">
+          <Link href="/" passHref>
+            <button className="site-button">
+              Siteye Dön
+            </button>
+          </Link>
           <button className="back-button" onClick={handleGoBack}>
             Geri
           </button>
@@ -121,10 +126,11 @@ export default function AdminMessages() {
           padding: 20px;
           max-width: 1200px;
           margin: 40px auto;
-          background-color: #fff;
+          background-color: #212121; // Dark background
           border-radius: 8px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          font-family: sans-serif;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+          font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+          color: #e0e0e0;
         }
         header {
           display: flex;
@@ -132,27 +138,22 @@ export default function AdminMessages() {
           align-items: center;
           margin-bottom: 30px;
           padding-bottom: 20px;
-          border-bottom: 1px solid #eee;
+          border-bottom: 1px solid #424242;
         }
         h1 {
           margin: 0;
-          color: #333;
+          color: #f5f5f5;
           font-size: 28px;
         }
         .header-buttons {
           display: flex;
           align-items: center;
+          gap: 10px;
         }
         .header-buttons a {
-          margin-right: 10px;
           text-decoration: none;
-          color: #007bff;
-          font-size: 16px;
         }
-        .header-buttons a:hover {
-          text-decoration: underline;
-        }
-        .back-button, .logout-button, .mark-read-button {
+        .back-button, .logout-button, .mark-read-button, .site-button {
           padding: 8px 16px;
           color: #fff;
           border: none;
@@ -160,66 +161,72 @@ export default function AdminMessages() {
           cursor: pointer;
           font-size: 16px;
           transition: background-color 0.3s ease;
-          margin-left: 10px; /* Butonlar arasına boşluk */
         }
-         .back-button {
-          background-color: #6c757d; /* Gri tonu */
+         .site-button {
+          background-color: rgba(255,255,255,0.1); 
+          border: 1px solid rgba(255,255,255,0.2);
+        }
+        .site-button:hover {
+          background-color: rgba(255,255,255,0.2);
+        }
+        .back-button {
+          background-color: #616161; // Darker grey
         }
         .back-button:hover {
-          background-color: #5a6268;
+          background-color: #424242;
         }
         .logout-button {
-          background-color: #dc3545; /* Kırmızı tonu */
+          background-color: #D32F2F; // Darker red
         }
         .logout-button:hover {
-          background-color: #c82333;
+          background-color: #C62828;
         }
         .mark-read-button {
-          background-color: #007bff; /* Mavi tonu */
+          background-color: #4CAF50; // Green
         }
         .mark-read-button:hover {
-          background-color: #0056b3;
+          background-color: #43A047;
         }
 
         .messages-layout {
           display: grid;
           grid-template-columns: 300px 1fr;
           gap: 20px;
-          background: #fff;
+          background: #333333; // Darker background
           border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
           overflow: hidden;
         }
         .message-list {
-          border-right: 1px solid #eee;
-          max-height: calc(100vh - 200px); /* Başlık ve marginler düşüldü */
+          border-right: 1px solid #424242;
+          max-height: calc(100vh - 200px); 
           overflow-y: auto;
         }
         .message-item {
           padding: 15px;
-          border-bottom: 1px solid #eee;
+          border-bottom: 1px solid #424242;
           cursor: pointer;
           transition: background-color 0.2s ease;
         }
         .message-item:hover {
-          background-color: #f5f5f5;
+          background-color: #424242;
         }
         .message-item.selected {
-          background-color: #e9e9e9;
+          background-color: #555555;
         }
         .message-item.read {
           opacity: 0.7;
         }
         .message-name {
           font-weight: bold;
-          color: #333;
+          color: #f5f5f5;
         }
         .message-item.read .message-name {
           font-weight: normal;
         }
         .message-date {
           font-size: 14px;
-          color: #666;
+          color: #bdbdbd;
           margin-top: 5px;
         }
 
@@ -229,36 +236,47 @@ export default function AdminMessages() {
         .detail-header {
           margin-bottom: 20px;
           padding-bottom: 15px;
-          border-bottom: 1px solid #eee;
+          border-bottom: 1px solid #424242;
         }
         .detail-header h2 {
           margin: 0 0 5px 0;
-          color: #555;
+          color: #f5f5f5;
         }
         .detail-field {
           margin-bottom: 15px;
           font-size: 16px;
-          color: #555;
+          color: #e0e0e0;
         }
         .detail-field strong {
-          color: #333;
+          color: #f5f5f5;
         }
         .message-content {
           margin-bottom: 20px;
           padding: 15px;
-          background: #f9f9f9;
+          background: #424242; // Darker background
           border-radius: 4px;
-          white-space: pre-wrap;
-          border: 1px solid #eee;
-          color: #333;
+          color: #e0e0e0;
         }
+
         .no-message-selected {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-          color: #888;
-          font-size: 18px;
+          text-align: center;
+          padding: 50px;
+          color: #bdbdbd;
+        }
+
+        @media (max-width: 768px) {
+          .admin-container {
+            padding: 10px;
+            margin: 20px auto;
+          }
+          .messages-layout {
+            grid-template-columns: 1fr;
+          }
+          .message-list {
+            border-right: none;
+            border-bottom: 1px solid #424242;
+            max-height: 250px; /* Adjust height for mobile */
+          }
         }
       `}</style>
     </div>

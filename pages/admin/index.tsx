@@ -18,21 +18,21 @@ export default function AdminPanel() {
       description: 'Projeleri ekle, düzenle ve yönet',
       icon: '📊',
       path: '/admin/projects',
-      color: '#4CAF50'
+      color: '#424242'
     },
     {
       title: 'Gelen Mesajlar',
       description: 'Müşteri mesajlarını görüntüle ve yanıtla',
       icon: '✉️',
       path: '/admin/messages',
-      color: '#2196F3'
+      color: '#455A64'
     },
     {
       title: 'Şifre Değiştir',
       description: 'Admin paneli şifrenizi güncelleyin',
       icon: '🔒',
       path: '/admin/change-password',
-      color: '#FF9800'
+      color: '#5D4037'
     }
   ];
 
@@ -41,9 +41,16 @@ export default function AdminPanel() {
       <header className="dashboard-header">
         <div className="header-content">
           <h1>Admin Paneli</h1>
-          <button className="logout-button" onClick={handleLogout}>
-            Çıkış Yap
-          </button>
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <Link href="/" passHref>
+              <button className="site-button">
+                Siteye Dön
+              </button>
+            </Link>
+            <button className="logout-button" onClick={handleLogout}>
+              Çıkış Yap
+            </button>
+          </div>
         </div>
       </header>
 
@@ -73,15 +80,15 @@ export default function AdminPanel() {
       <style jsx>{`
         .admin-dashboard {
           min-height: 100vh;
-          background-color: #f8f9fa;
+          background-color: #212121;
           font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
         .dashboard-header {
-          background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+          background: linear-gradient(135deg, #121212 0%, #333333 100%);
           color: white;
           padding: 1.5rem 2rem;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
         .header-content {
@@ -96,9 +103,11 @@ export default function AdminPanel() {
           margin: 0;
           font-size: 1.8rem;
           font-weight: 600;
+          color: #f5f5f5;
         }
 
-        .logout-button {
+        .logout-button,
+        .site-button {
           background-color: rgba(255,255,255,0.1);
           color: white;
           border: 1px solid rgba(255,255,255,0.2);
@@ -109,7 +118,8 @@ export default function AdminPanel() {
           transition: all 0.3s ease;
         }
 
-        .logout-button:hover {
+        .logout-button:hover,
+        .site-button:hover {
           background-color: rgba(255,255,255,0.2);
         }
 
@@ -120,22 +130,22 @@ export default function AdminPanel() {
         }
 
         .welcome-section {
-          background: white;
+          background: #333333;
           padding: 2rem;
           border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
           margin-bottom: 2rem;
         }
 
         .welcome-section h2 {
           margin: 0 0 0.5rem 0;
-          color: #1a237e;
+          color: #e0e0e0;
           font-size: 1.5rem;
         }
 
         .welcome-section p {
           margin: 0;
-          color: #666;
+          color: #bdbdbd;
           font-size: 1rem;
         }
 
@@ -151,7 +161,7 @@ export default function AdminPanel() {
         }
 
         .menu-item-content {
-          background: white;
+          background: #424242;
           border-radius: 8px;
           padding: 1.5rem;
           display: flex;
@@ -159,12 +169,12 @@ export default function AdminPanel() {
           gap: 1.5rem;
           transition: all 0.3s ease;
           border: 2px solid transparent;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .menu-item-content:hover {
           transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
 
         .menu-icon {
@@ -180,13 +190,13 @@ export default function AdminPanel() {
 
         .menu-text h3 {
           margin: 0 0 0.5rem 0;
-          color: #333;
+          color: #f5f5f5;
           font-size: 1.2rem;
         }
 
         .menu-text p {
           margin: 0;
-          color: #666;
+          color: #bdbdbd;
           font-size: 0.9rem;
         }
 

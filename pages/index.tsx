@@ -50,25 +50,25 @@ export default function Home() {
         {/* İçerik */}
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 1000, padding: '0 20px' }}>
           <h1 style={{
-            fontSize: 72, 
-            fontWeight: 'bold', 
-            marginBottom: 25, 
-            letterSpacing: 2, 
-            textShadow:'2px 2px 8px rgba(0,0,0,0.5)',
+            fontSize: 72,
+            fontWeight: 'bold',
+            marginBottom: 25,
+            letterSpacing: 2,
+            textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
           }}>GÖKMEN İNŞAAT</h1>
           <p style={{
             fontSize: 20,
             fontWeight: 400,
             marginBottom: 50,
-            textShadow:'1px 1px 4px rgba(0,0,0,0.5)',
+            textShadow: '1px 1px 4px rgba(0,0,0,0.5)',
           }}>Her Tuğlada Güven, Her Katmanda Kalite</p>
-          <div style={{display:'flex',gap:20,flexWrap:'wrap',justifyContent:'center'}}>
+          <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', justifyContent: 'center' }}>
             <Link href="/iletisim" className="hero-button primary" style={{
-              padding:'12px 25px',
-              borderRadius:8,
-              fontWeight:600,
-              textDecoration:'none',
-              boxShadow:'0 4px 10px rgba(0,0,0,0.2)',
+              padding: '12px 25px',
+              borderRadius: 8,
+              fontWeight: 600,
+              textDecoration: 'none',
+              boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
               border: 'none',
               backgroundColor: '#333',
               transition: 'all 0.3s ease',
@@ -76,11 +76,11 @@ export default function Home() {
               textShadow: 'none'
             }}>İletişim</Link>
             <Link href="/projeler" className="hero-button secondary" style={{
-              padding:'12px 25px',
-              borderRadius:8,
-              fontWeight:600,
-              textDecoration:'none',
-              boxShadow:'0 4px 10px rgba(0,0,0,0.2)',
+              padding: '12px 25px',
+              borderRadius: 8,
+              fontWeight: 600,
+              textDecoration: 'none',
+              boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
               border: 'none',
               backgroundColor: '#f0f0f0',
               transition: 'all 0.3s ease',
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      <main style={{flex:1,display:'flex',flexDirection:'column',alignItems:'center',padding:'60px 16px',position:'relative',zIndex:1, width:'100%'}}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '60px 16px', position: 'relative', zIndex: 1, width: '100%' }}>
         {/* Hakkımızda Kısa Bölüm */}
         <section style={{
           maxWidth: 1000,
@@ -100,7 +100,7 @@ export default function Home() {
           background: '#ffffff',
           borderRadius: 16,
           padding: 40,
-          boxShadow:'0 4px 20px rgba(0,0,0,0.08)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden'
@@ -114,29 +114,29 @@ export default function Home() {
             background: 'linear-gradient(45deg, rgba(0,0,0,0.01), rgba(0,0,0,0.03))',
             zIndex: 0
           }}></div>
-          <div style={{position: 'relative', zIndex: 1}}>
-            <h2 style={{fontSize: 30, fontWeight: 'bold', marginBottom: 25, color:'#222'}}>Biz Kimiz?</h2>
-            <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20, marginBottom: 30}}>
-              <div style={{position: 'relative', height: 200, borderRadius: 10, overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.1)'}}>
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            <h2 style={{ fontSize: 30, fontWeight: 'bold', marginBottom: 25, color: '#222' }}>Biz Kimiz?</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20, marginBottom: 30 }}>
+              <div style={{ position: 'relative', height: 200, borderRadius: 10, overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
                 <Image
                   src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
                   alt="Modern İnşaat"
                   layout="fill"
                   objectFit="cover"
-                  style={{filter: 'grayscale(30%)'}}
+                  style={{ filter: 'grayscale(30%)' }}
                 />
               </div>
-              <div style={{position: 'relative', height: 200, borderRadius: 10, overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.1)'}}>
+              <div style={{ position: 'relative', height: 200, borderRadius: 10, overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
                 <Image
                   src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
                   alt="Profesyonel Ekip"
                   layout="fill"
                   objectFit="cover"
-                  style={{filter: 'grayscale(50%)'}}
+                  style={{ filter: 'grayscale(50%)' }}
                 />
               </div>
             </div>
-            <p style={{fontSize: 17, color: '#444', lineHeight: 1.6, maxWidth: 800, margin:'0 auto'}}>
+            <p style={{ fontSize: 17, color: '#444', lineHeight: 1.6, maxWidth: 800, margin: '0 auto' }}>
               Gökmen İnşaat olarak; sağlam temeller üzerine sadece binalar değil, güven, kalite ve gelecek inşa ediyoruz. Sektörde genç bir firma olabiliriz; fakat cesaretimiz, işimize duyduğumuz saygı ve detaylara verdiğimiz önemle fark yaratmaya kararlıyız.
 
               Kurulduğumuz günden bu yana hedefimiz; modern, estetik ve işlevsel yapılarla yaşam alanlarını daha yaşanabilir kılmak. Proje yönetiminden malzeme seçimine, iş gücünden zaman planlamasına kadar her adımda şeffaf, disiplinli ve çözüm odaklı bir anlayışla ilerliyoruz.
@@ -145,26 +145,26 @@ export default function Home() {
 
               Biz; bugünün emeğini, yarının değerine dönüştüren genç ama kararlı bir inşaat firmasıyız.
             </p>
-            <div style={{display: 'flex', gap: 15, justifyContent: 'center', marginTop: 30}}>
-              <div style={{background: '#fff', padding: '12px 20px', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #eee'}}>
-                <div style={{fontSize: 22, fontWeight: 'bold', color: '#222', marginBottom: 5}}>4</div>
-                <div style={{fontSize: 13, color: '#666'}}>Yıllık Deneyim</div>
+            <div style={{ display: 'flex', gap: 15, justifyContent: 'center', marginTop: 30 }}>
+              <div style={{ background: '#fff', padding: '12px 20px', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #eee' }}>
+                <div style={{ fontSize: 22, fontWeight: 'bold', color: '#222', marginBottom: 5 }}>4</div>
+                <div style={{ fontSize: 13, color: '#666' }}>Yıllık Deneyim</div>
               </div>
-              <div style={{background: '#fff', padding: '12px 20px', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #eee'}}>
-                <div style={{fontSize: 22, fontWeight: 'bold', color: '#222', marginBottom: 5}}>15+</div>
-                <div style={{fontSize: 13, color: '#666'}}>Tamamlanan Proje</div>
+              <div style={{ background: '#fff', padding: '12px 20px', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #eee' }}>
+                <div style={{ fontSize: 22, fontWeight: 'bold', color: '#222', marginBottom: 5 }}>15+</div>
+                <div style={{ fontSize: 13, color: '#666' }}>Tamamlanan Proje</div>
               </div>
-              <div style={{background: '#fff', padding: '12px 20px', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #eee'}}>
-                <div style={{fontSize: 22, fontWeight: 'bold', color: '#222', marginBottom: 5}}>50+</div>
-                <div style={{fontSize: 13, color: '#666'}}>Uzman Personel</div>
+              <div style={{ background: '#fff', padding: '12px 20px', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #eee' }}>
+                <div style={{ fontSize: 22, fontWeight: 'bold', color: '#222', marginBottom: 5 }}>50+</div>
+                <div style={{ fontSize: 13, color: '#666' }}>Uzman Personel</div>
               </div>
             </div>
             <Link href="/hakkimizda" style={{
-              display:'inline-block', 
-              marginTop: 30, 
-              color: '#fff', 
-              textDecoration:'none', 
-              fontWeight: 600, 
+              display: 'inline-block',
+              marginTop: 30,
+              color: '#fff',
+              textDecoration: 'none',
+              fontWeight: 600,
               fontSize: 16,
               padding: '10px 25px',
               border: 'none',
@@ -184,17 +184,17 @@ export default function Home() {
           background: '#f8f8f8',
           borderRadius: 16,
           padding: 40,
-          boxShadow:'0 8px 25px rgba(0,0,0,0.15)',
+          boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
           textAlign: 'center',
           border: '1px solid #d0d0d0'
         }}>
-          <h2 style={{fontSize: 30, fontWeight: 'bold', marginBottom: 25, color:'#222', textShadow: '1px 1px 3px rgba(0,0,0,0.1)'}}>İletişime Geçin</h2>
-          <p style={{fontSize: 17, color: '#444', lineHeight: 1.6, maxWidth: 800, margin:'0 auto'}}>Bize Ulaşın, Beton Gibi Sağlam Bir İletişim Kuralım!</p>
+          <h2 style={{ fontSize: 30, fontWeight: 'bold', marginBottom: 25, color: '#222', textShadow: '1px 1px 3px rgba(0,0,0,0.1)' }}>İletişime Geçin</h2>
+          <p style={{ fontSize: 17, color: '#444', lineHeight: 1.6, maxWidth: 800, margin: '0 auto' }}>Bize Ulaşın, Beton Gibi Sağlam Bir İletişim Kuralım!</p>
           <Link href="/iletisim" style={{
-            display:'inline-block',
+            display: 'inline-block',
             marginTop: 30,
             color: '#fff',
-            textDecoration:'none',
+            textDecoration: 'none',
             fontWeight: 600,
             fontSize: 16,
             padding: '10px 25px',
@@ -207,7 +207,8 @@ export default function Home() {
 
       </main>
 
-      <footer style={{textAlign:'center',padding:'25px 0',color:'#888',fontSize:14,background:'#e0e0e0',borderTop:'1px solid #d0d0d0',position:'relative',zIndex:1}}>© {new Date().getFullYear()} Gökmen İnşaat. Tüm hakları saklıdır.</footer>
+      <footer style={{ textAlign: 'center', padding: '25px 0', color: '#888', fontSize: 14, background: '#e0e0e0', borderTop: '1px solid #d0d0d0', position: 'relative', zIndex: 1 }}>
+      </footer>
 
       {/* styled-jsx ile hover stilleri */}
       <style jsx>{`

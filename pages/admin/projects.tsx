@@ -44,7 +44,7 @@ export default function AdminProjects() {
     e.preventDefault();
     const method = editingId ? 'PUT' : 'POST';
     const url = editingId ? `/api/projects?id=${editingId}` : '/api/projects';
-    
+
     const formDataToSend = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
       if (value !== undefined) {
@@ -55,7 +55,7 @@ export default function AdminProjects() {
     if (selectedImage) {
       formDataToSend.append('image', selectedImage);
     }
-    
+
     const res = await fetch(url, {
       method,
       body: formDataToSend
@@ -104,6 +104,11 @@ export default function AdminProjects() {
         <div className="header-content">
           <h1>Projeleri Yönet</h1>
           <div className="header-buttons">
+            <Link href="/" passHref>
+              <button className="site-button">
+                Siteye Dön
+              </button>
+            </Link>
             <button className="back-button" onClick={handleGoBack}>
               Geri
             </button>
@@ -128,7 +133,7 @@ export default function AdminProjects() {
                   <input
                     type="text"
                     value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
                   />
                 </div>
@@ -136,7 +141,7 @@ export default function AdminProjects() {
                   <label>Durum:</label>
                   <select
                     value={formData.status}
-                    onChange={(e) => setFormData({...formData, status: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, status: e.target.value })}
                   >
                     <option value="planlandı">Planlandı</option>
                     <option value="devam_ediyor">Devam Ediyor</option>
@@ -148,7 +153,7 @@ export default function AdminProjects() {
                   <input
                     type="text"
                     value={formData.location}
-                    onChange={(e) => setFormData({...formData, location: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     required
                   />
                 </div>
@@ -157,7 +162,7 @@ export default function AdminProjects() {
                   <input
                     type="date"
                     value={formData.startDate}
-                    onChange={(e) => setFormData({...formData, startDate: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, startDate: e.target.value })}
                     required
                   />
                 </div>
@@ -166,14 +171,14 @@ export default function AdminProjects() {
                   <input
                     type="date"
                     value={formData.endDate}
-                    onChange={(e) => setFormData({...formData, endDate: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, endDate: e.target.value })}
                   />
                 </div>
                 <div className="form-group full-width">
                   <label>Açıklama:</label>
                   <textarea
                     value={formData.description}
-                    onChange={(e) => setFormData({...formData, description: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                     required
                   />
                 </div>
@@ -236,15 +241,15 @@ export default function AdminProjects() {
       <style jsx>{`
         .admin-dashboard {
           min-height: 100vh;
-          background-color: #f8f9fa;
+          background-color: #212121;
           font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
         .dashboard-header {
-          background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+          background: linear-gradient(135deg, #121212 0%, #333333 100%);
           color: white;
           padding: 1.5rem 2rem;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
         .header-content {
@@ -259,46 +264,32 @@ export default function AdminProjects() {
           margin: 0;
           font-size: 1.8rem;
           font-weight: 600;
+          color: #f5f5f5;
         }
 
         .header-buttons {
           display: flex;
-          gap: 1rem;
+          gap: 10px;
         }
 
-        .back-button, .add-button, .logout-button, .submit-button, .cancel-button, .edit-button {
+        .logout-button,
+        .back-button,
+        .add-button,
+        .site-button {
+          background-color: rgba(255,255,255,0.1);
+          color: white;
+          border: 1px solid rgba(255,255,255,0.2);
           padding: 0.5rem 1rem;
-          border: none;
           border-radius: 4px;
           cursor: pointer;
           font-size: 0.9rem;
           transition: all 0.3s ease;
-          color: white;
         }
 
-        .back-button {
-          background-color: rgba(255,255,255,0.1);
-          border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .back-button:hover {
-          background-color: rgba(255,255,255,0.2);
-        }
-
-        .add-button {
-          background-color: #4CAF50;
-        }
-
-        .add-button:hover {
-          background-color: #45a049;
-        }
-
-        .logout-button {
-          background-color: rgba(255,255,255,0.1);
-          border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .logout-button:hover {
+        .logout-button:hover,
+        .back-button:hover,
+        .add-button:hover,
+        .site-button:hover {
           background-color: rgba(255,255,255,0.2);
         }
 
@@ -309,115 +300,139 @@ export default function AdminProjects() {
         }
 
         .form-container {
-          background: white;
+          background: #333333;
           padding: 2rem;
           border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
           margin-bottom: 2rem;
+          color: #e0e0e0;
         }
 
         .form-container h2 {
           margin: 0 0 1.5rem 0;
-          color: #1a237e;
-          font-size: 1.5rem;
+          color: #f5f5f5;
+          text-align: center;
+          font-size: 1.8rem;
         }
 
         .form-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1rem;
+          margin-bottom: 1.5rem;
         }
 
-        .form-group {
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
+        .form-group label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          color: #bdbdbd;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          width: 100%;
+          padding: 0.75rem;
+          border: 1px solid #555;
+          border-radius: 6px;
+          background-color: #424242;
+          color: #e0e0e0;
+          font-size: 1rem;
+          box-sizing: border-box;
+          outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+          border-color: #66bb6a; // Green accent for focus
+          box-shadow: 0 0 0 3px rgba(102, 187, 106, 0.2);
         }
 
         .form-group.full-width {
           grid-column: 1 / -1;
         }
 
-        .form-group label {
-          color: #495057;
-          font-weight: 500;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="date"],
-        .form-group textarea,
-        .form-group select {
-          padding: 0.75rem;
-          border: 1px solid #ced4da;
+        .current-image img {
+          max-width: 150px;
+          height: auto;
+          margin-top: 10px;
           border-radius: 4px;
-          font-size: 1rem;
-          transition: border-color 0.3s ease;
-        }
-
-        .form-group input[type="text"]:focus,
-        .form-group input[type="date"]:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-          border-color: #1a237e;
-          outline: none;
-        }
-
-        .form-group textarea {
-          height: 120px;
-          resize: vertical;
         }
 
         .form-actions {
           display: flex;
-          gap: 1rem;
-          margin-top: 2rem;
+          justify-content: flex-end;
+          gap: 10px;
+        }
+
+        .submit-button,
+        .cancel-button {
+          padding: 0.75rem 1.5rem;
+          border: none;
+          border-radius: 6px;
+          font-size: 1rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s ease;
         }
 
         .submit-button {
-          background-color: #1a237e;
+          background-color: #66bb6a; // Green for submit
+          color: white;
         }
 
         .submit-button:hover {
-          background-color: #0d47a1;
+          background-color: #5cb85c;
+          transform: translateY(-1px);
         }
 
         .cancel-button {
-          background-color: #6c757d;
+          background-color: #ef5350; // Red for cancel
+          color: white;
         }
 
         .cancel-button:hover {
-          background-color: #5a6268;
+          background-color: #d32f2f;
+          transform: translateY(-1px);
         }
 
         .projects-section {
-          margin-top: 2rem;
+          background: #333333;
+          padding: 2rem;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .projects-section h2 {
-          color: #1a237e;
-          margin-bottom: 1.5rem;
+          margin: 0 0 1.5rem 0;
+          color: #f5f5f5;
+          text-align: center;
+          font-size: 1.8rem;
         }
 
         .projects-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           gap: 1.5rem;
         }
 
         .project-card {
-          background: white;
+          background: #424242;
           border-radius: 8px;
           overflow: hidden;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-          transition: transform 0.3s ease;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          transition: transform 0.2s ease-in-out;
+          color: #e0e0e0;
         }
 
         .project-card:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transform: translateY(-5px);
         }
 
         .project-image {
+          width: 100%;
           height: 200px;
           overflow: hidden;
         }
@@ -433,84 +448,80 @@ export default function AdminProjects() {
         }
 
         .project-content h3 {
-          margin: 0 0 1rem 0;
-          color: #1a237e;
-          font-size: 1.2rem;
-        }
-
-        .project-details {
-          margin-bottom: 1rem;
+          margin-top: 0;
+          margin-bottom: 0.8rem;
+          color: #f5f5f5;
+          font-size: 1.4rem;
         }
 
         .project-details p {
-          margin: 0.5rem 0;
-          color: #666;
+          margin-bottom: 0.5rem;
+          font-size: 0.95rem;
+          color: #bdbdbd;
         }
 
-        .status-badge {
-          padding: 0.25rem 0.5rem;
-          border-radius: 12px;
-          font-size: 0.8rem;
-          font-weight: 500;
-        }
-
-        .status-badge.planlandı {
-          background-color: #e3f2fd;
-          color: #1976d2;
-        }
-
-        .status-badge.devam_ediyor {
-          background-color: #fff3e0;
-          color: #f57c00;
-        }
-
-        .status-badge.tamamlandı {
-          background-color: #e8f5e9;
-          color: #388e3c;
+        .project-details strong {
+          color: #f5f5f5;
         }
 
         .project-description {
-          color: #666;
-          margin: 1rem 0;
+          font-size: 0.9rem;
+          color: #bdbdbd;
           line-height: 1.5;
+          margin-top: 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .status-badge {
+          padding: 0.3rem 0.6rem;
+          border-radius: 4px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: white;
+        }
+
+        .status-badge.planlandı {
+          background-color: #FF9800; // Orange
+        }
+
+        .status-badge.devam_ediyor {
+          background-color: #2196F3; // Blue
+        }
+
+        .status-badge.tamamlandı {
+          background-color: #4CAF50; // Green
         }
 
         .edit-button {
-          background-color: #ffc107;
-          color: #000;
-          width: 100%;
-          margin-top: 1rem;
+          background-color: #7986cb; // Indigo
+          color: white;
+          padding: 0.6rem 1.2rem;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.9rem;
+          transition: all 0.3s ease;
         }
 
         .edit-button:hover {
-          background-color: #ffb300;
-        }
-
-        .current-image {
-          margin-top: 1rem;
-        }
-
-        .current-image img {
-          max-width: 200px;
-          border-radius: 4px;
-          border: 1px solid #ced4da;
+          background-color: #5c6bc0;
+          transform: translateY(-1px);
         }
 
         @media (max-width: 768px) {
+          .dashboard-header,
           .dashboard-content {
             padding: 0 1rem;
           }
 
-          .form-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .projects-grid {
-            grid-template-columns: 1fr;
-          }
-
           .header-buttons {
             flex-direction: column;
+            align-items: flex-end;
+          }
+
+          .header-buttons button {
+            width: 100%;
+            margin-bottom: 5px; /* Add some space between buttons */
           }
         }
       `}</style>
